@@ -1,0 +1,59 @@
+{
+  "name": "@micro/react-micro-fe",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "webpack serve --port 8003",
+    "start:standalone": "webpack serve --env standalone --port 8003",
+    "build": "webpack --mode=production",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.96",
+    "@types/react": "^16.9.32",
+    "@types/react-dom": "^16.9.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.1",
+    "react-router-dom": "^5.2.0",
+    "single-spa-react": "^4.0.0",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/plugin-transform-runtime": "^7.12.1",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "@babel/preset-typescript": "^7.12.7",
+    "@babel/runtime": "^7.12.5",
+    "ts-config-single-spa": "^2.0.0",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-config-single-spa-react": "^4.0.5",
+    "webpack-config-single-spa-react-ts": "^4.0.5",
+    "webpack-config-single-spa-ts": "^2.0.0",
+    "webpack-dev-server": "^4.0.0-beta.0",
+    "webpack-merge": "^5.4.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

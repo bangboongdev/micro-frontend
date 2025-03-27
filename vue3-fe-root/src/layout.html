@@ -1,0 +1,35 @@
+<single-spa-router>
+    <div class="layout-wrapper layout-content-navbar">
+        <div class="layout-container">
+            <application name="@micro/vue3-fe-layout" props="baseUrl"></application>
+            <div id="main-contents" class="layout-page">
+                <!-- Content wrapper -->
+                <div class="content-wrapper">
+                    <route path="/"></route>
+                    <route path="angular">
+                        <application name="@micro/angular-micro-fe" props="baseUrl"></application>
+                    </route>
+                    <route path="react">
+                        <application name="@micro/react-micro-fe"></application>
+                    </route>
+                </div>
+                <!-- Content wrapper -->
+
+                <route path="no-permission">
+                    <div class="content-wrapper">
+                        <div class="error-404">
+                            <img src="fe-assets/images/403.png" alt="403 error"/>
+                        </div>
+                    </div>
+                </route>
+                <route default>
+                    <div class="content-wrapper">
+                        <div class="error-404">
+                            <img src="fe-assets/images/404.png" alt="404 error"/>
+                        </div>
+                    </div>
+                </route>
+            </div>
+        </div>
+    </div>
+</single-spa-router>

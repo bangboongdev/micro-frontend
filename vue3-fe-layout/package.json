@@ -1,0 +1,38 @@
+{
+  "name": "@micro/vue3-fe-layout",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8001",
+    "start": "vite --port 8001",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "single-spa-vue": "2.5.1",
+    "vite-svg-loader": "4.0.0",
+    "vue": "3.4.21",
+    "vue-axios": "3.5.2",
+    "vue-i18n": "9.1.10",
+    "vue-router": "4.3.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "5.0.4",
+    "@vue/cli-plugin-babel": "5.0.8",
+    "@vue/cli-plugin-eslint": "5.0.8",
+    "@vue/cli-plugin-router": "5.0.8",
+    "@vue/cli-plugin-typescript": "5.0.8",
+    "@vue/cli-plugin-vuex": "5.0.8",
+    "@vue/cli-service": "5.0.8",
+    "@vue/eslint-config-typescript": "11.0.3",
+    "eslint": "8.22.0",
+    "eslint-plugin-vue": "9.25.0",
+    "sass": "1.32.6",
+    "sass-loader": "10.1.1",
+    "typescript": "5.4.5",
+    "vite": "5.2.8",
+    "vue-cli-plugin-single-spa": "3.3.0",
+    "vue-svg-loader": "^0.17.0-beta.2"
+  }
+}

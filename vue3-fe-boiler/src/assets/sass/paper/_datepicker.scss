@@ -1,0 +1,64 @@
+.datepicker {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  label{
+    font-weight: normal !important;
+    min-height: 24px;
+  }
+  &.input-requires{
+    .control-label{
+      &:after{
+        content: "*";
+        color: red;
+      }
+    }
+  }
+  .mx-datepicker {
+    width: 100%;
+  }
+  .group-input {
+    display: flex;
+    flex-grow: 1;
+    position: relative;
+    .text-error{
+      display: none;
+    }
+    .datepicker-form-control{
+
+      &.datepicker-day{
+        flex-grow: 1;
+      }
+      .vdp-datepicker__calendar-button{
+        position: absolute;
+        right: 4px;
+        display: flex;
+        height: 40px;
+        align-items: center;
+      }
+      .datepicker-input{
+        height: 40px;
+        border-radius: 3px;
+        border: 1px solid #ced4da;
+        padding: 0 32px 0 16px;
+        width: 100%;
+      }
+    }
+  }
+  &.input-error{
+    input{
+      border-color: red !important;
+    }
+    .text-error{
+      &:empty{
+        display: none;
+      }
+      color: red;
+      left: 4px;
+      padding: 0px 5px;
+      display: block;
+      line-height: 20px;
+      background: #ffffff;
+    }
+  }
+}

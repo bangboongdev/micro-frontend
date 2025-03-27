@@ -1,0 +1,26 @@
+.vue-notifyjs .alert[data-notify="container"] {
+  padding: 20px 20px 20px 30px !important;
+  &.alert-success{
+    background: #d6e9c6;
+    color: #3c763d;
+  }
+  &.alert-info{
+    background: #d9edf7;
+    color: #31708f;
+  }
+  &.alert-warning{
+    background: #fcf8e3;
+    color: #8a6d3b;
+  }
+  &.alert-danger{
+    background: #f2dede;
+    color: #a94442;
+  }
+}
+
+.alert span[data-notify="icon"] {
+}
+
+.alert span[data-notify="message"] {
+  margin-left: 30px;
+}

@@ -1,0 +1,28 @@
+#!groovy
+
+node {
+    properties([disableConcurrentBuilds()])
+    def envi
+    def branch_name = "${BRANCH_NAME}"
+    envi = branch_name.split("/").size() > 1 ? branch_name.split("/")[1] : "none"
+    if (envi == "none") {
+        echo "branch is not support!"
+        return "illegally branch"
+    }
+    def image_version = "1.0.0"
+    stage('1. Clone') {
+        checkout scm
+    }
+
+    stage('2. Build code') {
+        sh "npm install"
+        sh "npm version --allow-same-version=true --git-tag-version=false ${image_version}-${envi}"
+        sh "npm run build:${envi}"
+        sh "npm publish"
+    }
+
+	stage('3. Push to k8s') {
+        build job: "FE/${envi}-bpm", wait: true
+    }
+}
+

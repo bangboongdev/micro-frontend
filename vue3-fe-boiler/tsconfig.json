@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    // "experimentalDecorators": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "importHelpers": true,
+    // // Thuộc tính
+    "noImplicitAny": false,
+    // Bật cảnh báo lỗi khi 1 thuộc tính trong class khởi tạo nhưng ko đc set trong hàm tạo
+    "strict": true,
+    "strictPropertyInitialization": true,
+    "target": "esnext",
+    // fix import module
+    "esModuleInterop": true,
+    "allowJs": true,
+    // "checkJs": true,
+    "lib": [
+      "dom",
+      "es2017",
+      "ES2017",
+      "ES2018",
+      "ESNext",
+      "DOM"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "types": [
+      "webpack-env" // here
+    ]
+  },
+  "typeRoots": [
+    "./node_modules/@types",
+    ".//typings"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "src/**/**/*.ts",
+    "src/**/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/**/*.vue",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "@micro/angular-micro-fe",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "npm run serve:single-spa",
+    "build": "npm run build:single-spa",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test",
+    "serve:single-spa": "ng serve --disable-host-check --live-reload false --port 8002",
+    "build:single-spa": "ng build --deploy-url /dist/angular-micro-fe --output-hashing none"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular-builders/custom-webpack": "^16.0.1",
+    "@angular/animations": "^16.2.0",
+    "@angular/common": "^16.2.0",
+    "@angular/compiler": "^16.2.0",
+    "@angular/core": "^16.2.0",
+    "@angular/forms": "^16.2.0",
+    "@angular/platform-browser": "^16.2.0",
+    "@angular/platform-browser-dynamic": "^16.2.0",
+    "@angular/router": "^16.2.0",
+    "rxjs": "~7.8.0",
+    "single-spa": "^6.0.1",
+    "single-spa-angular": "^9.1.2",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.13.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "^16.2.14",
+    "@angular/cli": "^16.2.14",
+    "@angular/compiler-cli": "^16.2.0",
+    "@types/jasmine": "~4.3.0",
+    "jasmine-core": "~4.6.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.1.3"
+  }
+}

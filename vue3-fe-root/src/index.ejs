@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue 3 </title>
+  <link rel="shortcut icon" href="/fe-assets/favicon.ico">
+  <link rel="stylesheet" href="/fe-assets/lib/fontawesome/css/all.css">
+  <link rel="stylesheet" href="/fe-assets/lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/fe-assets/css/all.css">
+  <script src='/fe-assets/js/popper.min.js'></script>
+  <script src='/fe-assets/lib/bootstrap/js/bootstrap.min.js'></script>
+  <script src='/fe-assets/lib/jquery/jquery.min.js'></script>
+
+  <script src='/fe-assets/js/config.js'></script>
+  <script src='/fe-assets/js/helpers.js'></script>
+  <script src='/fe-assets/js/main.js'></script>
+  <script src='/fe-assets/js/menu.js'></script>
+
+  <!-- Import for build code server -->
+  <script type="systemjs-importmap" src="/importmap.json"></script>
+  <!-- Import for run code local -->
+  <% if (isLocal) { %>
+  <script type="systemjs-importmap" src="/importmap-local.json"></script>
+  <% } %>
+  <script src="/fe-assets/lib/import-map-overrides/import-map-overrides.js"></script>
+  <script src="/fe-assets/lib/systemjs/system.min.js"></script>
+  <script src="/fe-assets/lib/systemjs/extras/amd.min.js"></script>
+  <script src="https://unpkg.com/zone.js@0.10.3/dist/zone.js"></script>
+  <style>
+    .fi{
+      font-size: 1rem;
+      display: inline-block;
+      font-style: normal;
+      font-variant: normal;
+      line-height: 0 !important;
+      text-rendering: auto;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    System.import('@micro/vue3-fe-root');
+  </script>
+</body>
+</html>
